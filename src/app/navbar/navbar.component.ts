@@ -9,7 +9,7 @@ export class NavbarComponent implements OnInit {
   @ViewChild('navbar') navbar: ElementRef;
   imgHeight = 160;
   navHeight = 0;
-
+  isCollapsed = true;
   constructor() { }
 
   ngOnInit() {

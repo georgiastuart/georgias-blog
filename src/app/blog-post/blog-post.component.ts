@@ -5,6 +5,7 @@ import { ArticleService, ArticleInfo } from '../article.service';
 import * as moment from 'moment';
 import * as marked from 'marked';
 import 'prismjs/components/prism-python';
+import {Title} from '@angular/platform-browser';
 declare var require;
 
 @Component({
@@ -23,7 +24,8 @@ export class BlogPostComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private articleService: ArticleService
+    private articleService: ArticleService,
+    private titleService: Title
   ) { }
 
   ngOnInit() {
@@ -37,10 +39,13 @@ export class BlogPostComponent implements OnInit {
       (article: ArticleInfo) => {
         this.article = article;
         this.loading = false;
+        this.titleService.setTitle('Georgia\'s Blog: ' + article.title);
       }, (error) => {
         this.errorMsg = 'Error finding article ' + slug;
         this.loading = false;
         this.error = true;
+        this.titleService.setTitle('Article Not Found');
+
       }
     );
     // this.url = '/assets/blog/' + this.article.url + '/' + slug + '.md';
