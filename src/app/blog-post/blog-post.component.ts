@@ -3,6 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ArticleService, ArticleInfo } from '../article.service';
 import * as moment from 'moment';
+import * as marked from 'marked';
+import 'prismjs/components/prism-python';
+declare var require;
 
 @Component({
   selector: 'app-blog-post',
@@ -12,6 +15,10 @@ import * as moment from 'moment';
 export class BlogPostComponent implements OnInit {
   article: ArticleInfo;
   url: string;
+  loading: boolean;
+  errorMsg: string;
+  error: boolean;
+
   moment = moment;
   constructor(
     private route: ActivatedRoute,
@@ -23,10 +30,19 @@ export class BlogPostComponent implements OnInit {
     this.getArticle();
   }
 
-  getArticle(): void {
+  getArticle() {
+    this.loading = true;
     const slug = this.route.snapshot.paramMap.get('slug');
-    this.article = this.articleService.lookupArticle(slug);
-    this.url = '/assets/blog/' + this.article.url + '/' + slug + '.md';
-
+    this.articleService.lookupArticle(slug).subscribe(
+      (article: ArticleInfo) => {
+        this.article = article;
+        this.loading = false;
+      }, (error) => {
+        this.errorMsg = 'Error finding article ' + slug;
+        this.loading = false;
+        this.error = true;
+      }
+    );
+    // this.url = '/assets/blog/' + this.article.url + '/' + slug + '.md';
   }
 }

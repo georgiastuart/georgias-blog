@@ -1,0 +1,23 @@
+@import "../../variables";
+
+$navbar-border-width: 4px;
+
+nav {
+  &.navbar-ce {
+    background-color: $white;
+}
+
+  .navbar-brand {
+    border-bottom: transparent solid $navbar-border-width;
+}
+  .nav-link {
+    border-bottom: transparent solid $navbar-border-width;
+    &:hover {
+      border-bottom: $orange solid $navbar-border-width;
+  }
+
+    &.active {
+      border-bottom: $orange solid $navbar-border-width;
+  }
+}
+}

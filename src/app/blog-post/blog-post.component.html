@@ -1,8 +1,17 @@
-
-<!--{{ article }}-->
-
-{{ article.title }}<br>
-{{ moment(article.date).fromNow()}}
-<div class="blog-post-md">
-<div NgxMd [path]="url"></div>
+<div class="text-center" *ngIf="loading; else errorCheck">
+  <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
 </div>
+
+<ng-template #errorCheck>
+  <div class="text-center" *ngIf="error; else articleText">
+    {{ errorMsg }}
+  </div>
+</ng-template>
+
+<ng-template #articleText>
+  <h1 class="blog-post-title">{{ article.title }}</h1>
+  <div class="blog-date mb-3">{{ moment(article.date).fromNow()}} on {{ moment(article.date).format('dddd, MMMM Do, YYYY') }}</div>
+  <div class="blog-post-md">
+    <ngx-md>{{ article.text }}</ngx-md>
+  </div>
+</ng-template>

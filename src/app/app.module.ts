@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgxMdModule } from 'ngx-md';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,12 +12,13 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    BlogPostComponent
+    BlogPostComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxMdModule
+    NgxMdModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

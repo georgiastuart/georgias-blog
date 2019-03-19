@@ -1,9 +1,14 @@
 @import "../../variables";
 
-:host /deep/ .blog-post {
-  h1 {
-    color: orange;
-  }
+.blog-post-title {
+  color: $primary;
+}
+
+.blog-date {
+  color: $gray-500;
+}
+
+:host /deep/ .blog-post-md {
 
 }
 

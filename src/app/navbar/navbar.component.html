@@ -1,5 +1,14 @@
 <div class="container">
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Georgia Stuart</a>
-  </nav>
+  <img src="/assets/images/georgia.png" class="rounded mx-auto d-block p-2 rounded-circle" alt="Placeholder">
 </div>
+
+<div id="navbarPlaceholder" [style.height.px]="navHeight"></div>
+<nav #navbar class="navbar-ce navbar navbar-expand-lg navbar-light mb-3" (scroll)="onWindowScroll($event)">
+  <div class="container">
+    <a class="navbar-brand" href="#">Georgia Stuart</a>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav"></ul>
+    </div>
+  </div>
+</nav>
+
