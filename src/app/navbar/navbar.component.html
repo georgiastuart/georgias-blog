@@ -1,5 +1,5 @@
 <div class="container">
-  <img src="/assets/images/georgia.png" class="rounded mx-auto d-block p-2 rounded-circle" alt="Placeholder">
+  <img [src]="georgiaHeadshot" class="rounded mx-auto d-block p-2 pt-3 rounded-circle" alt="Placeholder">
 </div>
 
 <div id="navbarPlaceholder" [style.height.px]="navHeight"></div>
@@ -13,10 +13,13 @@
     <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/blog/">Blog</a>
+          <a class="nav-link" routerLink="/about/" routerLinkActive="nav-link-active">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact/">Contact Me</a>
+          <a class="nav-link" routerLink="/blog/" routerLinkActive="nav-link-active">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact/" routerLinkActive="nav-link-active">Contact Me</a>
         </li>
       </ul>
     </div>

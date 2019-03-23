@@ -4,6 +4,8 @@ import * as _ from 'lodash';
 import { Observable, throwError } from 'rxjs';
 import {map} from 'rxjs/operators';
 
+declare var require;
+
 export interface ArticleInfo {
   title: string;
   date: Date;
@@ -14,27 +16,19 @@ export interface ArticleInfo {
   excerpt: string;
 }
 
-const ARTICLES: ArticleInfo[] = [
-  {
-    title: 'This is a Test Blog Post',
-    date: new Date('2019-03-18T16:23:45+0000'),
-    tags: ['test', 'post'],
-    slug: 'this-is-a-test',
-    url: '2019/03/17',
-    text: '',
-    excerpt: ''
-  }
-];
-
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
   public readonly articleFrontmatter: ArticleInfo[];
+  articles: ArticleInfo[];
+
   constructor(
     private http: HttpClient
   ) {
-    this.articleFrontmatter = ARTICLES;
+    this.articles = require('../assets/blog/blog-list.json')['posts'];
+    console.log(this.articles);
+    this.articleFrontmatter = this.articles;
   }
 
   lookupArticle(slug: string): Observable<ArticleInfo> {
