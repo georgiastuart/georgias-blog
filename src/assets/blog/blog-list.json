@@ -2,7 +2,7 @@
   "posts": [
     {
       "title": "This is a Test Blog Post",
-      "date-created": "2019-03-18T16:23:45+0000",
+      "dateCreated": "2019-03-18T16:23:45+0000",
       "tags": [
         "test",
         "post"
@@ -12,7 +12,7 @@
     },
     {
       "title": "This is Another Test Blog Post",
-      "date-created": "2019-03-22T16:23:45+0000",
+      "dateCreated": "2019-03-22T16:36:15+0000",
       "tags": [
         "test",
         "post",

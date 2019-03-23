@@ -8,7 +8,7 @@ declare var require;
 
 export interface ArticleInfo {
   title: string;
-  date: Date;
+  dateCreated: string;
   slug: string;
   tags: string[];
   url: string;
@@ -26,13 +26,13 @@ export class ArticleService {
   constructor(
     private http: HttpClient
   ) {
-    this.articles = require('../assets/blog/blog-list.json')['posts'];
-    console.log(this.articles);
+    this.articles = require('../assets/blog/blog-list.json').posts;
+    // console.log(this.articles);
     this.articleFrontmatter = this.articles;
   }
 
   lookupArticle(slug: string): Observable<ArticleInfo> {
-    const article =  _.find(this.articleFrontmatter, (val: ArticleInfo) => val.slug === slug);
+    const article: ArticleInfo =  _.find(this.articleFrontmatter, (val: ArticleInfo) => val.slug === slug);
 
     if (!article) {
       return throwError('Article ' + slug + ' not found.');
