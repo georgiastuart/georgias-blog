@@ -1,0 +1,20 @@
+<div class="text-center" *ngIf="loading; else displayError">
+  <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+</div>
+
+<ng-template #displayError>
+<div *ngIf="errorMsg; else articleList">
+  <p>{{ errorMsg }}</p>
+</div>
+</ng-template>
+
+
+<ng-template #articleList>
+  <div *ngFor="let article of articles">
+    <h4><a routerLink="/blog/{{article.url}}/{{article.slug}}">{{article.title}}</a></h4>
+    <p class="small text-muted font-weight-light"><span class="font-italic">by</span> Georgia Stuart <em>on </em> <span>{{moment(article.dateCreated).format('dddd, MMMM Do, YYYY')}}</span></p>
+    <p class="lead">{{article.excerpt}}</p>
+    <div class="text-right"><a routerLink="/blog/{{article.url}}/{{article.slug}}" class="font-italic">Read More</a></div>
+    <hr>
+  </div>
+</ng-template>

@@ -14,6 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { CvComponent } from './cv/cv.component';
 import { AboutComponent } from './about/about.component';
+import { ArticleListComponent } from './article-list/article-list.component';
+import { ArticleListByYearComponent } from './article-list-by-year/article-list-by-year.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { AboutComponent } from './about/about.component';
     FooterComponent,
     ContactComponent,
     CvComponent,
-    AboutComponent
+    AboutComponent,
+    ArticleListComponent,
+    ArticleListByYearComponent
   ],
   imports: [
     BrowserModule,

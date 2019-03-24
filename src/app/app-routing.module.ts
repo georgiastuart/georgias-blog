@@ -6,6 +6,7 @@ import {BlogHomeComponent} from './blog-home/blog-home.component';
 import {ContactComponent} from './contact/contact.component';
 import {CvComponent} from './cv/cv.component';
 import {AboutComponent} from './about/about.component';
+import {ArticleListByYearComponent} from './article-list-by-year/article-list-by-year.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: '',
         component: BlogHomeComponent
+      },
+      {
+        path: ':year',
+        component: ArticleListByYearComponent
       },
       {
         path: ':year/:month/:day/:slug',
