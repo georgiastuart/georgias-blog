@@ -1,25 +1,35 @@
-{
-  "posts": [
-    {
-      "title": "This is a Test Blog Post",
-      "dateCreated": "2019-03-18T16:23:45+0000",
-      "tags": [
-        "test",
-        "post"
-      ],
-      "slug": "this-is-a-test",
-      "url": "2019/03/17"
-    },
-    {
-      "title": "This is Another Test Blog Post",
-      "dateCreated": "2019-03-22T16:36:15+0000",
-      "tags": [
-        "test",
-        "post",
-        "again"
-      ],
-      "slug": "this-is-another-test",
-      "url": "2019/03/22"
-    }
-  ]
-}
+[
+  {
+    "title": "This is a Test Blog Post",
+    "tags": [
+      "test",
+      "post"
+    ],
+    "dateCreated": "2019-03-18T16:23:45+0000",
+    "datePublished": "2019-03-18T16:23:45+0000",
+    "draft": false,
+    "slug": "this-is-a-test.md",
+    "excerpt": "Lorem ipsum dolor amet salvia tumeric vegan flannel subway tile. \nKogi post-ironic shoreditch viral drinking vinegar chartreuse. Raw denim fanny \npack taxidermy bushwick gastropub woke YOLO. Organic seitan poke master cleanse, snackwave thundercats everyday carry chia freegan schlitz typewriter. Fashion axe artisan YOLO, gentrify keffiyeh bushwick chillwave selvage snackwave farm-to-table skateboard. Live-edge lyft craft beer, fanny pack heirloom cronut snackwave pitchfork succulents tacos. Etsy mumblecore YOLO taxidermy."
+  },
+  {
+    "title": "This is a Test Blog Post",
+    "tags": [
+      "test",
+      "post"
+    ],
+    "dateCreated": "2019-03-22T16:36:15+0000",
+    "datePublished": "2019-03-22T16:36:15+0000",
+    "draft": false,
+    "slug": "this-is-another-test.md",
+    "excerpt": "Lorem ipsum dolor amet salvia tumeric vegan flannel subway tile. \nKogi post-ironic shoreditch viral drinking vinegar chartreuse. Raw denim fanny \npack taxidermy bushwick gastropub woke YOLO. Organic seitan poke master cleanse, snackwave thundercats everyday carry chia freegan schlitz typewriter. Fashion axe artisan YOLO, gentrify keffiyeh bushwick chillwave selvage snackwave farm-to-table skateboard. Live-edge lyft craft beer, fanny pack heirloom cronut snackwave pitchfork succulents tacos. Etsy mumblecore YOLO taxidermy."
+  },
+  {
+    "title": null,
+    "createdAt": "2019-03-25T00:49:35.867Z",
+    "publishedAt": null,
+    "draft": null,
+    "tags": null,
+    "slug": "new-blog-post.md",
+    "excerpt": "\n"
+  }
+]

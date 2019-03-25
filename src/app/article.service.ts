@@ -26,7 +26,7 @@ export class ArticleService {
   constructor(
     private http: HttpClient
   ) {
-    this.articles = require('../assets/blog/blog-list.json').posts;
+    this.articles = require('../assets/blog-list.json').posts;
     // console.log(this.articles);
     this.articleFrontmatter = this.articles;
     this.articles.forEach((article: ArticleInfo) => {

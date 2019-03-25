@@ -1,3 +1,11 @@
+title: This is a Test Blog Post
+tags: [test, post]
+dateCreated: 2019-03-18T16:23:45+0000
+datePublished: 2019-03-18T16:23:45+0000
+draft: false
+slug: this-is-a-test
+----------
+
 Lorem ipsum dolor amet salvia tumeric vegan flannel subway tile. 
 Kogi post-ironic shoreditch viral drinking vinegar chartreuse. Raw denim fanny 
 pack taxidermy bushwick gastropub woke YOLO. Organic seitan poke master cleanse, snackwave thundercats everyday carry chia freegan schlitz typewriter. Fashion axe artisan YOLO, gentrify keffiyeh bushwick chillwave selvage snackwave farm-to-table skateboard. Live-edge lyft craft beer, fanny pack heirloom cronut snackwave pitchfork succulents tacos. Etsy mumblecore YOLO taxidermy.

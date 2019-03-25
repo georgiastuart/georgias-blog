@@ -1,0 +1,3 @@
+frontmatterSep: ----------
+excerptSep: <!--more-->
+headerFields: [title, createdAt, publishedAt, draft, tags]
