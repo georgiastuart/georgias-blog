@@ -15,7 +15,7 @@ fileList.forEach((filename) => {
   const articleString = fs.readFileSync(resolve(filename)).toString();
   let frontMatter = articleString.split(fmSep)[0];
   frontMatter = YAML.parse(frontMatter);
-  frontMatter.slug = filename.split('/').slice(-1)[0];
+  frontMatter.slug = filename.split('/').slice(-1)[0].replace('.md', '');
 
   const excerpt = articleString.split(fmSep)[1].split(excerptSep)[0];
   frontMatter.excerpt = excerpt.replace(/^\n\n|\n\n$/g, '');
