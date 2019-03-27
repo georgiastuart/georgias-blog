@@ -7,6 +7,9 @@ const YAML = require('yaml');
 
 const date = new Date();
 
+let argv = require('minimist')(process.argv.slice(2));
+console.dir(argv);
+
 function createDir(path) {
   if(!fs.existsSync(path)) {
     fs.mkdirSync(path);
@@ -24,14 +27,27 @@ createDir(filepath);
 
 const config = YAML.parse(fs.readFileSync('src/scripts/script_config.yaml').toString());
 
-let template = '';
-config.headerFields.forEach((field) => {
-  if (field === 'createdAt') {
-    template += field + ': ' + JSON.stringify(date) + '\n';
-  } else {
-    template += field + ':\n';
-  }
-});
+const header = {
+  title: '',
+  createdAt: Date(),
+  publishedAt: Date(),
+  tags: [],
+  draft: true,
+  slug: ''
+};
+
+let template = YAML.stringify(header);
+
+// let template = '';
+// config.headerFields.forEach((field) => {
+//   if (field === 'createdAt' || field === 'publishedAt' ) {
+//     template += field + ': ' + JSON.stringify(date) + '\n';
+//   } else if (field === ''){
+//
+//   } else {
+//     template += field + ':\n';
+//   }
+// });
 template += '\n' + config.frontmatterSep + '\n\n\n' + config.excerptSep;
 console.log(template);
 
