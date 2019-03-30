@@ -5,11 +5,12 @@
       "test",
       "post"
     ],
-    "dateCreated": "2019-03-18T16:23:45+0000",
-    "datePublished": "2019-03-18T16:23:45+0000",
+    "createdAt": "2019-03-17T16:23:45+0000",
+    "publishedAt": "2019-03-18T16:23:45+0000",
     "draft": false,
     "slug": "this-is-a-test",
-    "excerpt": "Lorem ipsum dolor amet salvia tumeric vegan flannel subway tile. \nKogi post-ironic shoreditch viral drinking vinegar chartreuse. Raw denim fanny \npack taxidermy bushwick gastropub woke YOLO. Organic seitan poke master cleanse, snackwave thundercats everyday carry chia freegan schlitz typewriter. Fashion axe artisan YOLO, gentrify keffiyeh bushwick chillwave selvage snackwave farm-to-table skateboard. Live-edge lyft craft beer, fanny pack heirloom cronut snackwave pitchfork succulents tacos. Etsy mumblecore YOLO taxidermy."
+    "excerpt": "Lorem ipsum dolor amet salvia tumeric vegan flannel subway tile. \nKogi post-ironic shoreditch viral drinking vinegar chartreuse. Raw denim fanny \npack taxidermy bushwick gastropub woke YOLO. Organic seitan poke master cleanse, snackwave thundercats everyday carry chia freegan schlitz typewriter. Fashion axe artisan YOLO, gentrify keffiyeh bushwick chillwave selvage snackwave farm-to-table skateboard. Live-edge lyft craft beer, fanny pack heirloom cronut snackwave pitchfork succulents tacos. Etsy mumblecore YOLO taxidermy.",
+    "url": "2019/03/17"
   },
   {
     "title": "This is a Test Blog Post",
@@ -17,11 +18,12 @@
       "test",
       "post"
     ],
-    "dateCreated": "2019-03-22T16:36:15+0000",
-    "datePublished": "2019-03-22T16:36:15+0000",
+    "createdAt": "2019-03-22T16:36:15+0000",
+    "publishedAt": "2019-03-22T16:36:15+0000",
     "draft": false,
     "slug": "this-is-another-test",
-    "excerpt": "Lorem ipsum dolor amet salvia tumeric vegan flannel subway tile. \nKogi post-ironic shoreditch viral drinking vinegar chartreuse. Raw denim fanny \npack taxidermy bushwick gastropub woke YOLO. Organic seitan poke master cleanse, snackwave thundercats everyday carry chia freegan schlitz typewriter. Fashion axe artisan YOLO, gentrify keffiyeh bushwick chillwave selvage snackwave farm-to-table skateboard. Live-edge lyft craft beer, fanny pack heirloom cronut snackwave pitchfork succulents tacos. Etsy mumblecore YOLO taxidermy."
+    "excerpt": "Lorem ipsum dolor amet salvia tumeric vegan flannel subway tile. \nKogi post-ironic shoreditch viral drinking vinegar chartreuse. Raw denim fanny \npack taxidermy bushwick gastropub woke YOLO. Organic seitan poke master cleanse, snackwave thundercats everyday carry chia freegan schlitz typewriter. Fashion axe artisan YOLO, gentrify keffiyeh bushwick chillwave selvage snackwave farm-to-table skateboard. Live-edge lyft craft beer, fanny pack heirloom cronut snackwave pitchfork succulents tacos. Etsy mumblecore YOLO taxidermy.",
+    "url": "2019/03/22"
   },
   {
     "title": "Even More Blog Post Testing",
@@ -34,24 +36,22 @@
       "yep"
     ],
     "slug": "more-testing",
-    "excerpt": "This is a test post."
+    "excerpt": "This is a test post.",
+    "url": "2019/03/24"
   },
   {
-    "title": "",
+    "title": "Bob Ross is Cool",
     "createdAt": "2019-03-29T16:32:45-05:00",
-    "publishedAt": "2019-03-29T16:32:45-05:00",
-    "tags": [],
-    "draft": true,
+    "publishedAt": "2019-03-30T12:23:14-05:00",
+    "tags": [
+      "bob ross",
+      "quotes",
+      "happy trees",
+      "test"
+    ],
+    "draft": false,
     "slug": "test-slug",
-    "excerpt": "\n"
-  },
-  {
-    "title": "",
-    "createdAt": "2019-03-29T16:41:31-05:00",
-    "publishedAt": "2019-03-29T16:41:31-05:00",
-    "tags": [],
-    "draft": true,
-    "slug": "undefined",
-    "excerpt": "\n"
+    "excerpt": "You're meant to have fun in life. In your world you can create anything you desire. Just think about these things in your mind - then bring them into your world. Making all those little fluffies that live in the clouds. Let's go up in here, and start having some fun",
+    "url": "2019/03/29"
   }
 ]

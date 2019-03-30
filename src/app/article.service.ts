@@ -1,14 +1,18 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { environment } from '../environments/environment';
 import * as _ from 'lodash';
 import {combineLatest, forkJoin, Observable, of, throwError} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {ParamMap} from '@angular/router';
 
 declare var require;
 
 export interface ArticleInfo {
   title: string;
-  dateCreated: Date;
+  createdAt: Date;
+  publishedAt: Date;
+  draft: boolean;
   slug: string;
   tags: string[];
   url: string;
@@ -21,17 +25,29 @@ export interface ArticleInfo {
 })
 export class ArticleService {
   public readonly articleFrontmatter: ArticleInfo[];
+  allArticles: ArticleInfo[];
   articles: ArticleInfo[];
+  tags: Object;
 
   constructor(
     private http: HttpClient
   ) {
-    this.articles = require('../assets/blog-list.json').posts;
+    this.allArticles = require('../assets/blog/blog-list.json');
+    this.tags = require('../assets/blog/tag-list.json');
+
+    if (environment.production) {
+      this.articles  = this.allArticles.filter((article: ArticleInfo) => !article.draft);
+    } else {
+      this.articles = this.allArticles;
+      console.log(this.articles);
+    }
+
+    this.articles.reverse();
     // console.log(this.articles);
     this.articleFrontmatter = this.articles;
     this.articles.forEach((article: ArticleInfo) => {
-      article.dateCreated = new Date(article.dateCreated);
-      article.excerpt = '';
+      article.createdAt = new Date(article.createdAt);
+      article.publishedAt = new Date(article.publishedAt);
       article.text = '';
     });
   }
@@ -44,30 +60,35 @@ export class ArticleService {
     }
     return this.http.get('/assets/blog/' + article.url + '/' + slug + '.md', {responseType: 'text'})
       .pipe(map((md: string) => {
-        article.text = md;
-        article.excerpt = md.split('<!--more-->')[0];
+        article.text = md.split('----------')[1];
         return article;
       }));
   }
 
-  lookupArticleListByYear(year: number): ArticleInfo[] {
-    return this.articles.filter((article: ArticleInfo) => article.dateCreated.getFullYear() === year);
+  filterByTag(articleList: ArticleInfo[], tagList: string[]): ArticleInfo[] {
+    return articleList.filter((article: ArticleInfo) => article.tags.some((tag: string) => tagList.includes(tag)));
   }
 
-  getExcerpts(articles: ArticleInfo[]): Observable<ArticleInfo[]> {
-    if (articles.length === 0) {
-      return throwError('No Articles');
+  filterByYear(articleList: ArticleInfo[], year: number): ArticleInfo[] {
+    return articleList.filter((article: ArticleInfo) => article.publishedAt.getFullYear() === year);
+  }
+  filterArticles(queryParamMap: ParamMap): ArticleInfo[] {
+    let tempList = this.articles;
+    try {
+      const tags = queryParamMap.get('tags').split(',');
+      tempList = this.filterByTag(tempList, tags);
+    } catch (e) { }
+
+    const year = +queryParamMap.get('year');
+    console.log(year);
+    if (year > 0) {
+      tempList = this.filterByYear(tempList, year);
     }
-    return combineLatest(articles.map((article: ArticleInfo): Observable<ArticleInfo> => {
-      if (article.excerpt.length === 0) {
-        return this.http.get('/assets/blog/' + article.url + '/' + article.slug + '.md', {responseType: 'text'})
-          .pipe(map((md: string): ArticleInfo => {
-            article.excerpt = md.split('<!--more-->')[0];
-            return article;
-          }));
-      } else {
-        return of(article);
-      }
-    }));
+
+    return tempList;
+  }
+
+  lookupArticleListByYear(year: number): ArticleInfo[] {
+    return this.articles.filter((article: ArticleInfo) => article.publishedAt.getFullYear() === year);
   }
 }

@@ -26,11 +26,7 @@ const routes: Routes = [
         component: BlogHomeComponent
       },
       {
-        path: ':year',
-        component: ArticleListByYearComponent
-      },
-      {
-        path: ':year/:month/:day/:slug',
+        path: ':slug',
         component: BlogPostComponent
       }
     ]

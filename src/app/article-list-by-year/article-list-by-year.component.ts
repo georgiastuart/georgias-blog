@@ -25,23 +25,11 @@ export class ArticleListByYearComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loading = true;
+    this.loading = false;
     this.year = +this.route.snapshot.paramMap.get('year');
     this.titleService.setTitle('Articles from ' + this.year);
     this.articles = this.articleService.lookupArticleListByYear(this.year);
     console.log(this.articles);
-
-    this.articleService.getExcerpts(this.articles)
-      .subscribe((articles: ArticleInfo[]) => {
-        this.articles = articles;
-        this.loading = false;
-        console.log(this.articles);
-        },
-        (error) => {
-          this.errorMsg = 'No articles for year ' + this.year;
-          console.log(this.errorMsg);
-          this.loading = false;
-        });
   }
 
 }

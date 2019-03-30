@@ -11,10 +11,10 @@
 
 <ng-template #articleList>
   <div *ngFor="let article of articles">
-    <h4><a routerLink="/blog/{{article.url}}/{{article.slug}}">{{article.title}}</a></h4>
-    <p class="small text-muted font-weight-light"><span class="font-italic">by</span> Georgia Stuart <em>on </em> <span>{{moment(article.dateCreated).format('dddd, MMMM Do, YYYY')}}</span></p>
+    <h4><a routerLink="/blog/{{article.slug}}">{{article.title}}</a></h4>
+    <p class="small text-muted font-weight-light"><span class="font-italic">by</span> Georgia Stuart <em>on </em> <span>{{moment(article.publishedAt).format('dddd, MMMM Do, YYYY')}}</span></p>
     <p class="lead">{{article.excerpt}}</p>
-    <div class="text-right"><a routerLink="/blog/{{article.url}}/{{article.slug}}" class="font-italic">Read More</a></div>
+    <div class="text-right"><a routerLink="/blog/{{article.slug}}" class="font-italic">Read More</a></div>
     <hr>
   </div>
 </ng-template>

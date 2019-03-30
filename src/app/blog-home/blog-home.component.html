@@ -1,3 +1,19 @@
-<p>
-  blog-home works!
-</p>
+<div>
+  <div class="mb-3">
+  <button type="button" class="btn filter-btn btn-block mb-3" (click)="showFilter = !showFilter"
+          [attr.aria-expanded]="showFilter" aria-controls="filterPanel">
+    <ng-template [ngIf]="!showFilter" [ngIfElse]="collapseArrow"> <i class="fas fa-chevron-down"></i></ng-template>
+    <ng-template #collapseArrow><i class="fas fa-chevron-up"></i></ng-template>
+    Filter
+  </button>
+  <div id="filterPanel" [ngbCollapse]="!showFilter">
+    <h6>Filter by Tag</h6>
+    <ul>
+      <li *ngFor="let tag of getTagList()"><button type="button" class="btn btn-primary">
+        {{ tag[0] }} <span class="badge badge-light">{{ tag[1] }}</span>
+      </button></li>
+    </ul>
+  </div>
+  </div>
+  <app-article-list [articles]="articles" [errorMsg]="errorMsg"></app-article-list>
+</div>

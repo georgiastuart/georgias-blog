@@ -30,8 +30,8 @@ const config = YAML.parse(fs.readFileSync('src/scripts/script_config.yaml').toSt
 
 const header = {
   title: '',
-  createdAt: moment(Date()).format(),
-  publishedAt: moment(Date()).format(),
+  createdAt: moment().format(),
+  publishedAt: moment().format(),
   tags: [],
   draft: true,
   slug: argv._[0]

@@ -40,7 +40,7 @@ export class BlogPostComponent implements OnInit {
         this.article = article;
         this.loading = false;
         this.titleService.setTitle('Georgia\'s Blog: ' + article.title);
-        console.log(this.article.dateCreated);
+        console.log(this.article.createdAt);
       }, (error) => {
         this.errorMsg = 'Error finding article ' + slug;
         this.loading = false;

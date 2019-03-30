@@ -10,7 +10,13 @@
 
 <ng-template #articleText>
   <h1 class="blog-post-title">{{ article.title }}</h1>
-  <div class="blog-date mb-3">{{ moment(article.dateCreated).fromNow()}} on {{ moment(article.dateCreated).format('dddd, MMMM Do, YYYY') }}</div>
+  <div class="blog-date mb-3">{{ moment(article.publishedAt).fromNow()}}
+    on {{ moment(article.publishedAt).format('dddd, MMMM Do, YYYY') }}
+    <ol class="tag-list list-unstyled">
+      <li *ngFor="let tag of article.tags" class="tag-item"><a routerLink="/blog"
+                                                               [queryParams]="{tags: tag}">{{ tag }}</a></li>
+    </ol>
+  </div>
   <div class="blog-post-md">
     <ngx-md>{{ article.text }}</ngx-md>
   </div>

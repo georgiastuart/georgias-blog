@@ -1,7 +1,7 @@
 title: This is a Test Blog Post
 tags: [test, post]
-dateCreated: 2019-03-18T16:23:45+0000
-datePublished: 2019-03-18T16:23:45+0000
+createdAt: 2019-03-17T16:23:45+0000
+publishedAt: 2019-03-18T16:23:45+0000
 draft: false
 slug: this-is-a-test
 ----------

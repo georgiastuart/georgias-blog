@@ -5,3 +5,24 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~prismjs/themes/prism-solarizedlight.css";
 
+.blog-tags {
+  color: $gray-500
+}
+
+.tag-list {
+  display: flex;
+  list-style: none;
+
+  &::before {
+    content: '\f02b';
+    font: normal normal normal 1rem/1.5 FontAwesome;
+    margin-right: 0.5rem;
+    vertical-align: middle
+  }
+
+  .tag-item {
+    &+.tag-item::before {
+      content: ', '
+    }
+  }
+}
