@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "new-post": "node src/scripts/new_blog_post.js"
+    "new-post": "node src/scripts/new_blog_post.js",
+    "process-blogs": "node src/scripts/process_blog_files.js"
   },
   "private": true,
   "dependencies": {

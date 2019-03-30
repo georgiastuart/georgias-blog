@@ -4,6 +4,7 @@ Creates a new blog post template in the directory of the created date
 
 const fs = require('fs');
 const YAML = require('yaml');
+const moment = require('moment');
 
 const date = new Date();
 
@@ -29,11 +30,11 @@ const config = YAML.parse(fs.readFileSync('src/scripts/script_config.yaml').toSt
 
 const header = {
   title: '',
-  createdAt: Date(),
-  publishedAt: Date(),
+  createdAt: moment(Date()).format(),
+  publishedAt: moment(Date()).format(),
   tags: [],
   draft: true,
-  slug: ''
+  slug: argv._[0]
 };
 
 let template = YAML.stringify(header);
@@ -51,4 +52,4 @@ let template = YAML.stringify(header);
 template += '\n' + config.frontmatterSep + '\n\n\n' + config.excerptSep;
 console.log(template);
 
-fs.writeFileSync(filepath + '/new-blog-post.md', template);
+fs.writeFileSync(filepath + '/' + argv._[0] + '.md', template);
