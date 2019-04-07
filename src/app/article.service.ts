@@ -66,18 +66,23 @@ export class ArticleService {
   }
 
   filterByTag(articleList: ArticleInfo[], tagList: string[]): ArticleInfo[] {
-    return articleList.filter((article: ArticleInfo) => article.tags.some((tag: string) => tagList.includes(tag)));
+    return articleList.filter((article: ArticleInfo) => tagList.every((tag: string) => article.tags.includes(tag)));
   }
 
   filterByYear(articleList: ArticleInfo[], year: number): ArticleInfo[] {
     return articleList.filter((article: ArticleInfo) => article.publishedAt.getFullYear() === year);
   }
+
   filterArticles(queryParamMap: ParamMap): ArticleInfo[] {
-    let tempList = this.articles;
-    try {
-      const tags = queryParamMap.get('tags').split(',');
-      tempList = this.filterByTag(tempList, tags);
-    } catch (e) { }
+
+    const tagString = queryParamMap.get('tags') || '';
+    let filterTags: string[];
+    if (tagString.length > 0) {
+      filterTags = tagString.split(',');
+    } else {
+      filterTags = [];
+    }
+    let tempList = this.filterByTag(this.articles, filterTags);
 
     const year = +queryParamMap.get('year');
     console.log(year);

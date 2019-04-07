@@ -8,8 +8,9 @@
   </button>
   <div id="filterPanel" [ngbCollapse]="!showFilter">
     <h6>Filter by Tag</h6>
-    <ul>
-      <li *ngFor="let tag of getTagList()"><button type="button" class="btn btn-primary">
+    <ul class="tag-btn-list list-unstyled">
+      <li *ngFor="let tag of getTagList()"><button type="button" class="btn btn-primary btn-tag mx-1 btn-sm"
+                                                   [ngClass]="{'btn-tag-active': tagIsActive(tag[0])}" (click)="filterByTag(tag[0])">
         {{ tag[0] }} <span class="badge badge-light">{{ tag[1] }}</span>
       </button></li>
     </ul>

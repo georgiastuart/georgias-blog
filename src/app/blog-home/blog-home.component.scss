@@ -6,3 +6,26 @@
   border-width: 0;
   padding: 0;
 }
+
+.btn-tag {
+  color: $gray-800;
+  background: $gray-300;
+  border-color: $gray-300;
+}
+
+.btn-tag-active {
+  color: $white;
+  background: $primary;
+  border-color: $primary;
+}
+
+.tag-btn-list {
+  display: flex;
+  list-style: none;
+
+  .tag-item {
+    &+.tag-item::before {
+      content: ', '
+    }
+  }
+}
