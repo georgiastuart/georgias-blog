@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
   imgHeight = 160;
   navHeight = 0;
   isCollapsed = true;
-  georgiaHeadshot = 'assets/images/georgia.png';
+  georgiaHeadshot = 'assets/images/georgia.webp';
   constructor() { }
 
   ngOnInit() {
