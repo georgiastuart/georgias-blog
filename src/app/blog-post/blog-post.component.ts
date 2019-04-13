@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { Location } from '@angular/common';
 import { ArticleService, ArticleInfo } from '../article.service';
 import * as moment from 'moment';
@@ -19,30 +19,33 @@ export class BlogPostComponent implements OnInit {
   loading: boolean;
   errorMsg: string;
   error: boolean;
+  slug: string;
 
   moment = moment;
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private location: Location,
     private articleService: ArticleService,
     private titleService: Title
   ) { }
 
   ngOnInit() {
+    this.slug = this.route.snapshot.paramMap.get('slug');
+    this.url = this.router.url;
     this.getArticle();
   }
 
   getArticle() {
     this.loading = true;
-    const slug = this.route.snapshot.paramMap.get('slug');
-    this.articleService.lookupArticle(slug).subscribe(
+    this.articleService.lookupArticle(this.slug).subscribe(
       (article: ArticleInfo) => {
         this.article = article;
         this.loading = false;
         this.titleService.setTitle('Georgia\'s Blog: ' + article.title);
         console.log(this.article.createdAt);
       }, (error) => {
-        this.errorMsg = 'Error finding article ' + slug;
+        this.errorMsg = 'Error finding article ' + this.slug;
         this.loading = false;
         this.error = true;
         this.titleService.setTitle('Article Not Found');

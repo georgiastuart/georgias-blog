@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgxMdModule } from 'ngx-md';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { DisqusModule } from 'ngx-disqus';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +37,8 @@ import { ArticleListByYearComponent } from './article-list-by-year/article-list-
     AppRoutingModule,
     NgxMdModule,
     HttpClientModule,
-    NgbCollapseModule
+    NgbCollapseModule,
+    DisqusModule.forRoot('georgia-stuart')
   ],
   providers: [],
   bootstrap: [AppComponent]
