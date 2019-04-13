@@ -1,4 +1,4 @@
-import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, isDevMode, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
   navHeight = 0;
   isCollapsed = true;
   georgiaHeadshot = 'assets/images/georgia.webp';
+  isDevMode = isDevMode;
   constructor() { }
 
   ngOnInit() {

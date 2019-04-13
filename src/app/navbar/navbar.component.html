@@ -1,5 +1,5 @@
 <div class="container">
-  <img [src]="georgiaHeadshot" class="rounded mx-auto d-block p-2 pt-3 rounded-circle" alt="Placeholder">
+  <img [src]="georgiaHeadshot" class="rounded mx-auto d-block p-2 pt-3 rounded-circle" alt="Georgia Stuart">
 </div>
 
 <div id="navbarPlaceholder" [style.height.px]="navHeight"></div>
@@ -15,7 +15,7 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/about/" routerLinkActive="nav-link-active">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isDevMode()">
           <a class="nav-link" routerLink="/blog/" routerLinkActive="nav-link-active">Blog</a>
         </li>
         <li class="nav-item">

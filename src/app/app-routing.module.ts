@@ -7,6 +7,7 @@ import {ContactComponent} from './contact/contact.component';
 import {CvComponent} from './cv/cv.component';
 import {AboutComponent} from './about/about.component';
 import {ArticleListByYearComponent} from './article-list-by-year/article-list-by-year.component';
+import {DevelopmentGuard} from './development-guard.service';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
   {
     path: 'blog',
     component: BlogComponent,
+    canActivate: [DevelopmentGuard],
     children: [
       {
         path: '',
