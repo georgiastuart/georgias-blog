@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleListByYearComponent } from './article-list-by-year/article-list-by-year.component';
 import { PublicationsComponent } from './publications/publications.component';
+import { TeachingComponent } from './teaching/teaching.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PublicationsComponent } from './publications/publications.component';
     AboutComponent,
     ArticleListComponent,
     ArticleListByYearComponent,
-    PublicationsComponent
+    PublicationsComponent,
+    TeachingComponent
   ],
   imports: [
     BrowserModule,

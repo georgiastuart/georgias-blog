@@ -9,6 +9,7 @@ import {AboutComponent} from './about/about.component';
 import {ArticleListByYearComponent} from './article-list-by-year/article-list-by-year.component';
 import {DevelopmentGuard} from './development-guard.service';
 import {PublicationsComponent} from './publications/publications.component';
+import {TeachingComponent} from './teaching/teaching.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'publications',
     component: PublicationsComponent
+  },
+  {
+    path: 'teaching',
+    component: TeachingComponent
   },
   {
     path: 'blog',
