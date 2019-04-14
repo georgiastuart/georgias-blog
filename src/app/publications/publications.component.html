@@ -1,3 +1,5 @@
+<h2>Publications</h2>
+
 <div class="text-center" *ngIf="loading; else errorCheck">
   <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
 </div>
@@ -9,29 +11,41 @@
 </ng-template>
 
 <ng-template #publications>
-  <h2>Publications</h2>
   <ul class="list-unstyled">
-      <li *ngFor="let paper of papers" class="mb-3">
-        <div class="row">
-          <div class="col-md-1 d-none d-md-block">{{ paper.year }}</div>
-          <div class="col-md-11 col-12">
+    <li *ngFor="let paper of papers" class="mb-3">
+      <div class="row">
+        <div class="col-md-1 d-none d-md-block">{{ paper.year }}</div>
+        <div class="col-md-11 col-12">
           <span class="authors">{{ paper.authors }},</span>
-        <span *ngIf="paper.file; else urlLink" class="paper-name"><a
-          href="assets/cv/publications/{{paper.file}}"> {{ paper.name }}</a></span>
-        <ng-template #urlLink><span *ngIf="paper.url; else noLink" class="paper-name"><a href="{{ paper.url }}">{{ paper.name }}</a></span></ng-template>
-        <ng-template #noLink><span class="paper-name"> {{ paper.name }}</span></ng-template>
-        <span *ngIf="paper.journal">, {{ paper.journal }}</span>
-        <span *ngIf="paper.volume">, {{ paper.volume }}</span>
-        ({{ paper.year }})
-        <span *ngIf="paper.pages">, pp. {{ paper.pages }}</span>
-        <span *ngIf="paper.other">, ({{ paper.other }})</span>
-          </div>
+          <span *ngIf="paper.file; else urlLink" class="paper-name"><a
+            href="assets/cv/publications/{{paper.file}}"> {{ paper.name }}</a></span>
+          <ng-template #urlLink><span *ngIf="paper.url; else noLink" class="paper-name"><a
+            href="{{ paper.url }}">{{ paper.name }}</a></span></ng-template>
+          <ng-template #noLink><span class="paper-name"> {{ paper.name }}</span></ng-template>
+          <span *ngIf="paper.journal">, {{ paper.journal }}</span>
+          <span *ngIf="paper.volume">, {{ paper.volume }}</span>
+          ({{ paper.year }})
+          <span *ngIf="paper.pages">, pp. {{ paper.pages }}</span>
+          <span *ngIf="paper.other">, ({{ paper.other }})</span>
         </div>
+      </div>
 
-      </li>
+    </li>
   </ul>
   <hr class="pb-3">
-  <h2>Presentations</h2>
+</ng-template>
+<h2>Presentations</h2>
+<div class="text-center" *ngIf="loading; else presErrorCheck">
+  <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+</div>
+
+<ng-template #presErrorCheck>
+  <div class="text-center" *ngIf="error; else presents">
+    {{ errorMsg }}
+  </div>
+</ng-template>
+
+<ng-template #presents>
 
   <ul class="list-unstyled">
     <li *ngFor="let paper of presentations" class="mb-3">
@@ -41,7 +55,8 @@
           <span class="authors">{{ paper.authors }},</span>
           <span *ngIf="paper.file; else urlLink" class="paper-name"><a
             href="assets/cv/publications/{{paper.file}}"> {{ paper.name }}</a></span>
-          <ng-template #urlLink><span *ngIf="paper.url; else noLink" class="paper-name"><a href="{{paper.url}}"> {{ paper.name }}</a></span></ng-template>
+          <ng-template #urlLink><span *ngIf="paper.url; else noLink" class="paper-name"><a
+            href="{{paper.url}}"> {{ paper.name }}</a></span></ng-template>
           <ng-template #noLink><span class="paper-name"> {{ paper.name }}</span></ng-template>
           <span *ngIf="paper.conference">, {{ paper.conference }}</span>
           <span *ngIf="paper.location">, {{ paper.location }}</span>
