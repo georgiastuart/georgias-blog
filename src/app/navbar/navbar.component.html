@@ -1,5 +1,8 @@
 <div class="container">
-  <img srcset="assets/images/georgia.webp" src="assets/images/georgia.png" class="rounded mx-auto d-block p-2 pt-3 rounded-circle" alt="Georgia Stuart">
+  <picture>
+    <source type="image/webp" srcset="{{ georgiaHeadshot }}.webp"/>
+    <img src="{{ georgiaHeadshot }}.png" class="rounded mx-auto d-block p-2 pt-3 rounded-circle" alt="Georgia Stuart">
+  </picture>
 </div>
 
 <div id="navbarPlaceholder" [style.height.px]="navHeight"></div>
