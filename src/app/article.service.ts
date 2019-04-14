@@ -27,7 +27,7 @@ export class ArticleService {
   public readonly articleFrontmatter: ArticleInfo[];
   allArticles: ArticleInfo[];
   articles: ArticleInfo[];
-  tags: Object;
+  tags: object;
 
   constructor(
     private http: HttpClient

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgxMdModule } from 'ngx-md';
 import { HttpClientModule } from '@angular/common/http';
-import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { DisqusModule } from 'ngx-disqus';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,7 @@ import { CvComponent } from './cv/cv.component';
 import { AboutComponent } from './about/about.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleListByYearComponent } from './article-list-by-year/article-list-by-year.component';
+import { PublicationsComponent } from './publications/publications.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ArticleListByYearComponent } from './article-list-by-year/article-list-
     CvComponent,
     AboutComponent,
     ArticleListComponent,
-    ArticleListByYearComponent
+    ArticleListByYearComponent,
+    PublicationsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { ArticleListByYearComponent } from './article-list-by-year/article-list-
     NgxMdModule,
     HttpClientModule,
     NgbCollapseModule,
+    NgbAccordionModule,
     DisqusModule.forRoot('georgia-stuart')
   ],
   providers: [],

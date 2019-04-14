@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "new-post": "node src/scripts/new_blog_post.js",
     "process-blogs": "node src/scripts/process_blog_files.js",
-    "publish": "node src/scripts/publish_post.js"
+    "publish": "node src/scripts/publish_post.js",
+    "parse-cv": "node src/scripts/parse_yaml_files.js"
   },
   "private": true,
   "dependencies": {

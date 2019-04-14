@@ -1,0 +1,27 @@
+<div class="text-center" *ngIf="loading; else errorCheck">
+  <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+</div>
+
+<ng-template #errorCheck>
+  <div class="text-center" *ngIf="error; else publications">
+    {{ errorMsg }}
+  </div>
+</ng-template>
+
+<ng-template #publications>
+  <h2>Publications</h2>
+  <li *ngFor="let paper of papers"><span class="authors">{{ paper.authors }},</span>
+    <span *ngIf="paper.file; else urlLink" class="paper-name"><a href="assets/cv/publications/{{paper.file}}"> {{ paper.name }}</a></span>
+    <ng-template #urlLink><span *ngIf="paper.file; else noLink">test2</span></ng-template>
+    <ng-template #noLink><span class="paper-name"> {{ paper.name }}</span></ng-template>
+    <span *ngIf="paper.journal">, {{ paper.journal }}</span>
+    <span *ngIf="paper.volume">, {{ paper.volume }}</span>
+    ({{ paper.year }})
+    <span *ngIf="paper.pages">, pp. {{ paper.pages }}</span>
+    <span *ngIf="paper.other">, ({{ paper.other }})</span>
+
+
+  </li>
+
+  <h2>Presentations</h2>
+</ng-template>

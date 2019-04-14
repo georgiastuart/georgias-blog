@@ -8,6 +8,7 @@ import {CvComponent} from './cv/cv.component';
 import {AboutComponent} from './about/about.component';
 import {ArticleListByYearComponent} from './article-list-by-year/article-list-by-year.component';
 import {DevelopmentGuard} from './development-guard.service';
+import {PublicationsComponent} from './publications/publications.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,11 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: CvComponent
+  },
+  {
+    path: 'publications',
+    component: PublicationsComponent
   },
   {
     path: 'blog',
