@@ -10,18 +10,46 @@
 
 <ng-template #publications>
   <h2>Publications</h2>
-  <li *ngFor="let paper of papers"><span class="authors">{{ paper.authors }},</span>
-    <span *ngIf="paper.file; else urlLink" class="paper-name"><a href="assets/cv/publications/{{paper.file}}"> {{ paper.name }}</a></span>
-    <ng-template #urlLink><span *ngIf="paper.file; else noLink">test2</span></ng-template>
-    <ng-template #noLink><span class="paper-name"> {{ paper.name }}</span></ng-template>
-    <span *ngIf="paper.journal">, {{ paper.journal }}</span>
-    <span *ngIf="paper.volume">, {{ paper.volume }}</span>
-    ({{ paper.year }})
-    <span *ngIf="paper.pages">, pp. {{ paper.pages }}</span>
-    <span *ngIf="paper.other">, ({{ paper.other }})</span>
+  <ul class="list-unstyled">
+      <li *ngFor="let paper of papers" class="mb-3">
+        <div class="row">
+          <div class="col-md-1 d-none d-md-block">{{ paper.year }}</div>
+          <div class="col-md-11 col-12">
+          <span class="authors">{{ paper.authors }},</span>
+        <span *ngIf="paper.file; else urlLink" class="paper-name"><a
+          href="assets/cv/publications/{{paper.file}}"> {{ paper.name }}</a></span>
+        <ng-template #urlLink><span *ngIf="paper.url; else noLink" class="paper-name"><a href="{{ paper.url }}">{{ paper.name }}</a></span></ng-template>
+        <ng-template #noLink><span class="paper-name"> {{ paper.name }}</span></ng-template>
+        <span *ngIf="paper.journal">, {{ paper.journal }}</span>
+        <span *ngIf="paper.volume">, {{ paper.volume }}</span>
+        ({{ paper.year }})
+        <span *ngIf="paper.pages">, pp. {{ paper.pages }}</span>
+        <span *ngIf="paper.other">, ({{ paper.other }})</span>
+          </div>
+        </div>
 
-
-  </li>
-
+      </li>
+  </ul>
+  <hr class="pb-3">
   <h2>Presentations</h2>
+
+  <ul class="list-unstyled">
+    <li *ngFor="let paper of presentations" class="mb-3">
+      <div class="row">
+        <div class="col-md-1 d-none d-md-block">{{ paper.year }}</div>
+        <div class="col-md-11 col-12">
+          <span class="authors">{{ paper.authors }},</span>
+          <span *ngIf="paper.file; else urlLink" class="paper-name"><a
+            href="assets/cv/publications/{{paper.file}}"> {{ paper.name }}</a></span>
+          <ng-template #urlLink><span *ngIf="paper.url; else noLink" class="paper-name"><a href="{{paper.url}}"> {{ paper.name }}</a></span></ng-template>
+          <ng-template #noLink><span class="paper-name"> {{ paper.name }}</span></ng-template>
+          <span *ngIf="paper.conference">, {{ paper.conference }}</span>
+          <span *ngIf="paper.location">, {{ paper.location }}</span>
+          ({{ paper.year }})
+          <span *ngIf="paper.other">, ({{ paper.other }})</span>
+        </div>
+      </div>
+
+    </li>
+  </ul>
 </ng-template>

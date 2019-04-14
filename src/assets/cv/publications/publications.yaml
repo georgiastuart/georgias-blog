@@ -6,12 +6,14 @@ papers:
     journal: SEG Technical Program Expanded Abstracts 2016
     pages: 3682-3687
     file: stuart_2016_two_stage_mcmc.pdf
+
   - token: geophysics2019
     name: A two-stage Markov chain Monte Carlo method for seismic inversion
     authors: G.K. Stuart, S.E. Minkoff, F. Pereira
     year: 2019
     journal: Geophysics
     other: IN REVISION MARCH 2019
+
   - token: seg2019
     name: Enhanced neural network sampling for two-stage Markov chain Monte Carlo seismic inversion
     authors: G.K. Stuart, S.E. Minkoff, F. Pereira
@@ -20,8 +22,79 @@ papers:
     other: SUBMITTED APRIL 2019
 
 presentations:
+  - token: regionviii
+    name: iPads in the mathematics classroom
+    authors: G.K. Stuart, E. Jones
+    year: 2013
+    conference: Region VIII Educational Service Center
+    location: Mount Pleasant, TX
+
+  - token: noyce2013
+    name: WIP Physics Camp for Girls
+    authors: G.K. Stuart
+    year: 2013
+    conference: NSF Robert Noyce Teacher Scholarship Program Conference
+    location: Washington D.C.
+    other: poster
+
+  - token: trc2013
+    name: What do mathematicians do anyway?
+    authors: G.K. Stuart
+    year: 2013
+    conference: Texas Regional Collaboratives 19th Annual Meeting
+    location: Austin, TX
+
+  - token: cast2014
+    name: Data and you
+    authors: G.K. Stuart
+    year: 2014
+    conference: Mini-CAST (Conference for the Advancement of Science Teaching)
+    location: Austin, TX
+
+  - token: trc2014
+    name: Probability in middle school
+    authors: G.K. Stuart
+    year: 2014
+    conference: Texas Regional Collaboratives 20th Annual Meeting
+    location: Austin, TX
+
+  - token: trc22015
+    name: Exploring middle school statistics
+    authors: G.K. Stuart
+    year: 2015
+    conference: Texas Regional Collaboratives 21st Annual Meeting
+    location: Austin, TX
+
+  - token: trc12015
+    name: Exploring middle school probability
+    authors: G.K. Stuart
+    year: 2015
+    conference: Texas Regional Collaboratives 21st Annual Meeting
+    location: Austin, TX
+
+  - token: siaman2016
+    name: Velocity estimation using multi-level Monte Carlo Bayesian inversion
+    authors: G.K. Stuart, W. Yang, S.E. Minkoff, F. Pereira
+    year: 2016
+    conference: 2016 SIAM Annual Meeting
+    location: Boston, MA
+
+  - token: seg2016
+    name: A two-stage Markov chain Monte Carlo method for velocity estimation and uncertainty quantification
+    authors: G.K. Stuart, W. Yang, S.E. Minkoff, F. Pereira
+    year: 2016
+    conference: 2016 SEG Annual Meeting
+    location: Dallas, TX
+
+  - token: siaman2018
+    name: Seismic velocity inversion using two-stage Markov chain Monte Carlo and operator upscaling for the acoustic wave equation
+    authors: G.K. Stuart, S.E. Minkoff, F. Pereira
+    year: 2018
+    conference: 2018 SIAM Annual Meeting
+    location: Portland, OR
+
   - token: siamgeosciences2019
-    name: Reducing the Computational Cost of Uncertainty Quantification for Seismic Inversion
+    name: Reducing the computational cost of uncertainty quantification for seismic inversion
     authors: G.K. Stuart, S.E. Minkoff, F. Pereira
     year: 2019
     conference: 2019 SIAM Conference on Mathematical & Computational Issues in the Geosciences
