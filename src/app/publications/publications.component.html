@@ -1,4 +1,6 @@
-<h2 class="my-4">Publications</h2>
+<h2>Publications</h2>
+<div class="scholar-link mb-3"><a href="https://scholar.google.com/citations?user=GsKQf-YAAAAJ&hl=en" target="_blank">
+  See my publications on Google Scholar.</a></div>
 
 <div class="text-center" *ngIf="loading; else errorCheck">
   <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
@@ -20,7 +22,7 @@
           <span *ngIf="paper.file; else urlLink" class="paper-name"><a
             href="assets/cv/publications/{{paper.file}}"> {{ paper.name }}</a></span>
           <ng-template #urlLink><span *ngIf="paper.url; else noLink" class="paper-name"><a
-            href="{{ paper.url }}">{{ paper.name }}</a></span></ng-template>
+            href="{{ paper.url }}" target="_blank">{{ paper.name }}</a></span></ng-template>
           <ng-template #noLink><span class="paper-name"> {{ paper.name }}</span></ng-template>
           <span *ngIf="paper.journal">, {{ paper.journal }}</span>
           <span *ngIf="paper.volume">, {{ paper.volume }}</span>

@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: CvComponent
+    component: AboutComponent
   },
   {
     path: 'publications',
