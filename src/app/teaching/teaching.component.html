@@ -1,1 +1,9 @@
-<h2 class="my-4">Courses Taught</h2>
+<h2>Courses I've Taught</h2>
+<span class="coursebook-link"><a [href]="coursebookUrl" target="_blank">See my UT Dallas courses on CourseBook</a></span>
+
+<ul>
+  <li *ngFor="let course of coursesTaught">
+    <div *ngIf="course.routerLink === undefined; else withUrl">{{ course.name }}</div>
+    <ng-template #withUrl><a [routerLink]="course.routerLink">{{ course.name }}</a></ng-template>
+  </li>
+</ul>
