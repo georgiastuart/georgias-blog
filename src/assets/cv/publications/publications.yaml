@@ -94,6 +94,13 @@ presentations:
     location: New Orleans, LA
     url: https://events.interpore.org/event/2/contributions/303/
 
+  - token: uteach2018
+    name: Stepping into computer science teacher preparation - pre-service, in-service, and infusing CS into science and mathematics
+    authors: M. Urquhart, A. Lalani, K. Donaldson, G.K. Stuart
+    year: 2018
+    conference: 2018 UTeach Conference
+    location: Austin, TX
+
   - token: siaman2018
     name: Seismic velocity inversion using two-stage Markov chain Monte Carlo and operator upscaling for the acoustic wave equation
     authors: G.K. Stuart, S.E. Minkoff, F. Pereira
