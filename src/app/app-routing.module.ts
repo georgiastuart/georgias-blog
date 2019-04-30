@@ -13,6 +13,10 @@ import {TeachingComponent} from './teaching/teaching.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: AboutComponent
+  },
+  {
     path: 'contact',
     component: ContactComponent
   },
