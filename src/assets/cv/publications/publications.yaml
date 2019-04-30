@@ -49,7 +49,7 @@ presentations:
     authors: G.K. Stuart
     year: 2014
     conference: Mini-CAST (Conference for the Advancement of Science Teaching)
-    location: Austin, TX
+    location: Dallas, TX
 
   - token: trc2014
     name: Probability in middle school
@@ -122,3 +122,10 @@ presentations:
     year: 2019
     conference: InterPore 2019
     location: Valencia, Spain
+
+  - token: uteach2019
+    name: 'Differentiating for graduate students: impacts of UTeach on a graduate program'
+    authors: M. Urquhart, S. Taylor, E. Hennessy, G.K. Stuart, J. McConnell
+    year: 2019
+    conference: 2019 UTeach Conference
+    location: Austin, TX
