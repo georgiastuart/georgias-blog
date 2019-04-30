@@ -86,6 +86,14 @@ presentations:
     conference: 2016 SEG Annual Meeting
     location: Dallas, TX
 
+  - token: interpore2018
+    name: Markov chain Monte Carlo methods for seismic inversion
+    authors: G.K. Stuart, S.E. Minkoff, F. Pereira
+    year: 2018
+    conference: InterPore 2018
+    location: New Orleans, LA
+    url: https://events.interpore.org/event/2/contributions/303/
+
   - token: siaman2018
     name: Seismic velocity inversion using two-stage Markov chain Monte Carlo and operator upscaling for the acoustic wave equation
     authors: G.K. Stuart, S.E. Minkoff, F. Pereira
@@ -100,3 +108,10 @@ presentations:
     conference: 2019 SIAM Conference on Mathematical & Computational Issues in the Geosciences
     location: Houston, TX
     url: https://www.pathlms.com/siam/courses/11267/sections/14663/video_presentations/128898
+
+  - token: interpore2019
+    name: A two-stage Markov chain Monte Carlo method for full waveform inversion
+    authors: G.K. Stuart, S.E. Minkoff, F. Pereira
+    year: 2019
+    conference: InterPore 2019
+    location: Valencia, Spain
