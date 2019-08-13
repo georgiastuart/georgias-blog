@@ -6,7 +6,7 @@ import {Component, ElementRef, HostListener, isDevMode, OnInit, ViewChild} from 
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @ViewChild('navbar') navbar: ElementRef;
+  @ViewChild('navbar', { static: true }) navbar: ElementRef;
   imgHeight = 160;
   navHeight = 0;
   isCollapsed = true;

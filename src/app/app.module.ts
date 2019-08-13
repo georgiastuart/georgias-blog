@@ -4,6 +4,7 @@ import { NgxMdModule } from 'ngx-md';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbAccordionModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { DisqusModule } from 'ngx-disqus';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,7 +44,8 @@ import { TeachingComponent } from './teaching/teaching.component';
     HttpClientModule,
     NgbCollapseModule,
     NgbAccordionModule,
-    DisqusModule.forRoot('georgia-stuart')
+    DisqusModule.forRoot('georgia-stuart'),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
