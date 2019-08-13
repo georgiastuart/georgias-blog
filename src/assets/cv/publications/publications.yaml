@@ -12,7 +12,8 @@ papers:
     authors: G.K. Stuart, S.E. Minkoff, F. Pereira
     year: 2019
     journal: SEG Technical Program Expanded Abstracts 2019
-    other: to appear
+    pages: 1670-1674
+    file: stuart_2019_neural_net_mcmc.pdf
 
   - token: geophysics2019
     name: A two-stage Markov chain Monte Carlo method for seismic inversion and uncertainty quantification
