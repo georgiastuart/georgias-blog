@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {ArticleInfo, ArticleService} from '../article.service';
 import {Title} from '@angular/platform-browser';
+import {faChevronUp, faChevronDown} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-blog-home',
@@ -18,6 +19,8 @@ export class BlogHomeComponent implements OnInit {
   loading: boolean;
   showFilter: boolean;
   Object: object;
+  faChevronUp = faChevronUp;
+  faChevronDown = faChevronDown;
 
   constructor(
     private route: ActivatedRoute,

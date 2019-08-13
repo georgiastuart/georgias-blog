@@ -2,8 +2,8 @@
   <div class="mb-3">
   <button type="button" class="btn filter-btn btn-block mb-3" (click)="showFilter = !showFilter"
           [attr.aria-expanded]="showFilter" aria-controls="filterPanel">
-    <ng-template [ngIf]="!showFilter" [ngIfElse]="collapseArrow"> <i class="fas fa-chevron-down"></i></ng-template>
-    <ng-template #collapseArrow><i class="fas fa-chevron-up"></i></ng-template>
+    <ng-template [ngIf]="!showFilter" [ngIfElse]="collapseArrow"> <fa-icon [icon]="faChevronDown"></fa-icon></ng-template>
+    <ng-template #collapseArrow><fa-icon [icon]="faChevronUp"></fa-icon></ng-template>
     Filter
   </button>
   <div id="filterPanel" [ngbCollapse]="!showFilter">

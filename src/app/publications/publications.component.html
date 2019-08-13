@@ -3,7 +3,7 @@
   See my publications on Google Scholar.</a></div>
 
 <div class="text-center" *ngIf="loading; else errorCheck">
-  <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+  <fa-icon [icon]="faSpinner" [spin]="true" size="3x"></fa-icon>
 </div>
 
 <ng-template #errorCheck>
@@ -38,7 +38,7 @@
 </ng-template>
 <h2 class="my-4">Presentations</h2>
 <div class="text-center" *ngIf="loading; else presErrorCheck">
-  <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+  <fa-icon [icon]="faSpinner" [spin]="true" size="3x"></fa-icon>
 </div>
 
 <ng-template #presErrorCheck>

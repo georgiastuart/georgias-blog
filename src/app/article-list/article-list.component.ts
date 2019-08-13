@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ArticleInfo} from '../article.service';
 import * as moment from 'moment';
+import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-article-list',
@@ -12,6 +13,7 @@ export class ArticleListComponent implements OnInit {
   @Input() loading: boolean;
   @Input() errorMsg: string;
   moment = moment;
+  faSpinner = faSpinner;
 
   constructor() { }
 

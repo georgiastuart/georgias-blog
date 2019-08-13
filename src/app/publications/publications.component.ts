@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {fakeAsync} from '@angular/core/testing';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 
 interface Publication {
@@ -29,6 +30,7 @@ export class PublicationsComponent implements OnInit {
   loading: boolean;
   error = false;
   errorMsg: string;
+  faSpinner = faSpinner;
 
   constructor(
     private http: HttpClient

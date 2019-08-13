@@ -6,6 +6,8 @@ import * as moment from 'moment';
 import * as marked from 'marked';
 import 'prismjs/components/prism-python';
 import {Title} from '@angular/platform-browser';
+import {faSpinner} from '@fortawesome/free-solid-svg-icons';
+
 declare var require;
 
 @Component({
@@ -20,6 +22,7 @@ export class BlogPostComponent implements OnInit {
   errorMsg: string;
   error: boolean;
   slug: string;
+  faSpinner = faSpinner;
 
   moment = moment;
   constructor(
