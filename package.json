@@ -30,7 +30,7 @@
     "@ng-bootstrap/ng-bootstrap": "^4.2.1",
     "bootstrap": "^4.3.1",
     "core-js": "^2.6.9",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "marked": "^0.7.0",
     "moment": "^2.24.0",
     "ngx-disqus": "^2.4.3",
