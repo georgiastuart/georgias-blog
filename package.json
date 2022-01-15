@@ -31,7 +31,7 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.6.9",
     "lodash": "^4.17.15",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "moment": "^2.24.0",
     "ngx-disqus": "^2.4.3",
     "ngx-md": "^7.1.3",
